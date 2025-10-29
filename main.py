@@ -1,14 +1,8 @@
-# ======================================
-# main.py — App 
-# ======================================
-
 from flask import Flask
 from reconFace import reconface_bp
 import os
 
 app = Flask(__name__)
-
-# Registra os Blueprints (rotas de cada módulo)
 app.register_blueprint(reconface_bp, url_prefix="/face")
 
 @app.route("/")
